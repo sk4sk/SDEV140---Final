@@ -1,0 +1,13 @@
+    PIESIZES = [
+        ("Small", 10),
+        ("Medium", 15),
+        ("Large", 20),
+    ]
+
+    sizes = IntVar()
+    sizes.set("Large")
+
+    i = 0
+    for size, price in PIESIZES:
+        Radiobutton(orderWindow, text=size, variable=sizes, value=price).grid(row=2, column=i)
+        i += 1
